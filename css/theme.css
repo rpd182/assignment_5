@@ -1,0 +1,46 @@
+body{
+    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+}
+
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+th,td{
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+img.myImg{
+    width: 50%;
+margin: 0px 0 0 215px;
+}
+
+
+#Tables{
+    margin-top: 20px;
+}
+
+#Images{
+    margin-top: 20px;
+}
+
+#Lists{
+    margin-top: 20px;
+}
+
+
+#Audio{
+    margin-top: 20px;
+}
+
+
+#Video{
+    margin-top: 20px;
+}
+
+.w3-border-red {
+    border-color: #383838!important;
+    padding-bottom: 26px !important;
+}

@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>WEB700</title>
+		<meta charset="UTF-8" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<link rel="stylesheet" href="/theme.css" type="text/css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    </head>
+
+	<body>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">Ryan Paul</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+					<li class="nav-item"><a class="nav-link" href="/htmlDemo">Html Demo</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/students/add">Add Student</a></li>
+				</ul>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item"><a class="nav-link" href="/student" target="_blank">Students</a></li>
+					<li class="nav-item"><a class="nav-link" href="/tas" target="_blank">Teaching Assistants</a></li>
+					<li class="nav-item"><a class="nav-link" href="/courses" target="_blank">Courses</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div class="container">
+			<div class="row">
+				<main class="col-md-12">
+
+
+
+					
+					<h1>Personal Information</h1>
+                    <form method="POST" action="/students/add" class="w3-container w3-brown">
+                        <p>      
+                            <label class="w3-text-brown"><b style="color:black !important;">First Name</b></label>
+                            <input class="w3-input w3-border w3-sand" name="firstName" type="text" id="firstName" required></p>
+                            <p>      
+                            <label class="w3-text-brown"><b style="color:black !important;">Last Name</b></label>
+                            <input class="w3-input w3-border w3-sand" name="lastName" type="text" id="lastName" required></p>
+                            <p>  
+                            <label class="w3-text-brown"><b style="color:black !important;">Email</b></label>
+                            <input class="w3-input w3-border w3-sand" name="email" type="email" id="email" required></p>
+                            <p>
+                                <div class="w3-row-padding">
+                                    <div class="w3-third">
+                                        <label class="w3-text-brown"><b style="color:black !important;">Address (Street)</b></label>
+                                      <input class="w3-input w3-border" type="text" id="addressStreet" name="addressStreet">
+                                    </div>
+                                    <div class="w3-third">
+                                        <label class="w3-text-brown"><b style="color:black !important;">Address (City)</b></label>
+                                      <input class="w3-input w3-border" type="text" id="addressCity" name="addressCity">
+                                    </div>
+                                    <div class="w3-third">
+                                        <label class="w3-text-brown"><b style="color:black !important;">Address (Province)</b></label>
+                                      <input class="w3-input w3-border" type="text" id="addressProvince" name="addressProvince">
+                                    </div>
+                                  </div><br>
+                                  <div class="academic-info-row"><b style="color:black !important; margin-right: 80px;">College Employment:</b> <b style="color:black !important; margin-right: 80px;">Enrollment Status:</b> <b style="color:black !important;">Enrolled in Course:</b></div>
+                                  <div class="buttons-info-row"><input class="w3-check" type="checkbox" checked="checked" id="TAs" name="TA" value="True"> <label style="margin-right: 80px;">Teaching Assistant</label> <input class="w3-radio" type="radio" name="status" value="Full Time" checked id="status"><label>Full Time</label>
+                                    <input class="w3-radio" type="radio" name="status" value="Part Time" checked id="status"><label style="margin-right: 106px;">Part Time</label>   
+                                    <select class="w3-select w3-border" name="course" style="width: 30% !important;" id="course" name="course">
+                                        <option value="" disabled selected>Choose your option</option>
+                                        <option value="1" name="1">Relational Database Design and Implementation</option>
+                                        <option value="2" name="2">Java Programming</option>
+                                        <option value="3" name="3">Introduction to Cloud Computing</option>
+                                        <option value="4" name="4">Database Administration and Management</option>
+                                        <option value="5" name="5">Web Programming</option>
+                                        <option value="6" name="6">Applied Capstone Project</option>
+                                        <option value="7" name="7">Database Connectivity Using Java</option>
+                                        <option value="8" name="8">Accessing Big Data</option>
+                                        <option value="9" name="9">Datawarehousing</option>
+                                        <option value="10" name="10">Security in Databases and Web Applications</option>
+                                        <option value="11" name="11">Work Term Preparation (Work-Integrated Learning option only)</option>
+                                      </select>
+                                </div>
+                                  
+
+
+                            <button class="w3-btn w3-yellow">Register</button></p>
+                    </form>
+
+					
+
+
+
+				</main>
+			</div>
+		</div>
+    <script>
+      var tascb = document.getElementbyId('TAs');
+
+      tascb.addEventListener('change', () => {
+        tascb.value = tascb.checked ? 'True' : 'False';
+      });
+    </script>
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</body>
+</html>
